@@ -1,0 +1,47 @@
+$primary-color:#4A707A;
+$secondary-color:#94B0B7;
+$teritary-color:#DDDDDA;
+
+$color-white: #fff;
+$color-dark:#000;
+$accent-color:#d3AB55;
+
+$font-josefinSans: 'JosefinSans-Regular', sans-serif;
+$font-josefinSansLight: 'JosefinSans-Light', sans-serif;
+$font-nunito: 'Nunito-Regular', 'sans-serif';
+$font-kaushan: 'Kaushan', 'sans-serif';
+
+@mixin flexBoxLayot {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+@mixin textStyle ($transform: uppercase ) {
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: $transform;
+}
+
+
+@mixin centerElement($topValue){
+    position: absolute;
+    top: $topValue;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+%fullSpace{
+    width: 100%;
+    height: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: $primary-color;
+}

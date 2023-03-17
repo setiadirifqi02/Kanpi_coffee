@@ -1,0 +1,17 @@
+@import "base";
+@import "layout";
+@import "components";
+@import "typeFace";
+
+h1{
+    font-family: 'JosefinSans-Bold';
+}
+
+h3{
+    font-family: 'JosefinSans-Light';
+}
+
+p{
+    font-family: 'Nunito-Regular';
+    line-height: 1.5;
+}

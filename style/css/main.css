@@ -1,0 +1,593 @@
+.card-overlay, .card-image {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #4A707A;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(/assets/images/banner-bg.jpg) center no-repeat;
+  background-size: cover;
+}
+header .brand {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .brand-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 0.4rem;
+}
+header .header-banner {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-us {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+@media (max-width: 500px) {
+  .about-us {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.8rem;
+    align-items: center;
+    height: 100vh;
+  }
+}
+.about-us__image {
+  width: 40%;
+  position: relative;
+  left: -100px;
+}
+@media (max-width: 500px) {
+  .about-us__image {
+    display: none;
+  }
+}
+.about-us__image img {
+  width: 100%;
+  opacity: 0.7;
+}
+.about-us__desc {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+@media (max-width: 500px) {
+  .about-us__desc {
+    margin: 4rem 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.about-us__desc .stars {
+  margin: 30px 0;
+}
+@media (max-width: 900px) {
+  .about-us__desc .stars {
+    margin: 0.8rem 0;
+  }
+}
+@media (max-width: 500px) {
+  .about-us__desc .stars {
+    margin: 0.4rem 0;
+  }
+}
+.about-us__desc .star {
+  font-size: 1.2rem;
+  color: #d3AB55;
+  padding: 0.6rem;
+}
+@media (max-width: 500px) {
+  .about-us__desc .star {
+    font-size: 0.8rem;
+  }
+}
+.about-us__content {
+  font-family: "JosefinSans-Light", sans-serif;
+  font-size: 1.2rem;
+  text-align: justify;
+  font-style: italic;
+  color: #DDDDDA;
+  opacity: 0.8;
+}
+.about-us__content::first-letter {
+  padding-left: 50px;
+}
+@media (max-width: 900px) {
+  .about-us__content {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 768px) {
+  .about-us__content {
+    font-size: 0.8rem;
+  }
+}
+
+.gallery {
+  margin: 2rem 0;
+}
+.gallery .card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer .footer-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+footer .footer-social-link ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .footer-social-link .social-link__item {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+@media (max-width: 500px) {
+  footer .footer-social-link .social-link__item {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 900px) {
+  footer .footer-social-link .social-link__item {
+    font-size: 1.4rem;
+  }
+}
+footer .footer-social-link .social-link__item .social-link__link {
+  color: #DDDDDA;
+}
+footer .footer-content {
+  text-align: center;
+  color: #DDDDDA;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+@media (max-width: 900px) {
+  footer .footer-content {
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  footer .footer-content {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.navbar {
+  display: flex;
+}
+.navbar .navbar-left {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #4A707A;
+  width: 50vw;
+  height: 100vh;
+  z-index: 200;
+  left: -50vw;
+  transition: left 0.5s ease-in-out;
+}
+@media (max-width: 500px) {
+  .navbar .navbar-left {
+    display: none;
+  }
+}
+.navbar .navbar-left__brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+  padding: 1rem;
+  width: 110px;
+  height: 110px;
+  color: #d3AB55;
+  border: 2px solid #d3AB55;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+@media (max-width: 800px) {
+  .navbar .navbar-left__brand-logo {
+    width: 80px;
+    height: 80px;
+    font-size: 3.5rem;
+  }
+}
+.navbar .navbar-left__brand-title {
+  text-align: center;
+  color: #d3AB55;
+}
+.navbar .navbar-left__brand-title h1 {
+  font-size: 2.4rem;
+}
+@media (max-width: 800px) {
+  .navbar .navbar-left__brand-title h1 {
+    font-size: 1.6rem;
+  }
+}
+.navbar .navbar-left__brand-title p {
+  font-size: 1.2rem;
+}
+@media (max-width: 800px) {
+  .navbar .navbar-left__brand-title p {
+    font-size: 1rem;
+  }
+}
+.navbar .navbar-right {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: -50vw;
+  background-color: #DDDDDA;
+  width: 50vw;
+  height: 100vh;
+  z-index: 100;
+  transition: right 0.5s ease-in-out;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .navbar .navbar-right {
+    width: 100%;
+    right: -100vw;
+  }
+}
+.navbar .navbar-right ul li {
+  list-style: none;
+  font-family: "Kaushan", "sans-serif";
+  color: #d3AB55;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 800px) {
+  .navbar .navbar-right ul li {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 500px) {
+  .navbar .navbar-right ul li {
+    font-size: 1.6rem;
+  }
+}
+.navbar .navbar-right.open {
+  right: 0;
+}
+.navbar .navbar-left.open {
+  left: 0;
+}
+
+.brand-logo {
+  font-size: 1.6rem;
+  padding: 0.2rem;
+  color: #d3AB55;
+  border: 2px solid #d3AB55;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+@media (max-width: 500px) {
+  .brand-logo {
+    width: 30px;
+    height: 30px;
+    font-size: 1.4rem;
+  }
+}
+
+.hamburger-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 11%;
+  right: 2%;
+  width: 50px;
+  height: 50px;
+  color: #d3AB55;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.hamburger-menu .fa-times {
+  display: none;
+}
+
+.open .fa-times {
+  display: block;
+}
+
+.open .fa-bars {
+  display: none;
+}
+
+.brand-desc___title {
+  font-family: "Nunito-Regular", "sans-serif";
+  font-size: 1.4rem;
+  color: #DDDDDA;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+@media (max-width: 500px) {
+  .brand-desc___title {
+    font-size: 1.2rem;
+  }
+}
+
+.brand-desc___subtitle {
+  font-family: "JosefinSans-Regular", sans-serif;
+  opacity: 0.7;
+  font-size: 0.6rem;
+  color: #DDDDDA;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.banner__main-heading {
+  font-family: "Kaushan", "sans-serif";
+  font-size: 3.4rem;
+  font-weight: 200;
+  color: #d3AB55;
+  margin: 1rem 0;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .banner__main-heading {
+    font-size: 2.4rem;
+    margin: 2rem 0;
+  }
+}
+@media (max-width: 500px) {
+  .banner__main-heading {
+    margin-bottom: 1.4rem;
+  }
+}
+
+.banner__sub-heading {
+  font-family: "JosefinSans-Light", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 100;
+  color: #DDDDDA;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .banner__sub-heading {
+    font-size: 1.4rem;
+    margin-bottom: 0.7rem;
+  }
+}
+@media (max-width: 500px) {
+  .banner__sub-heading {
+    font-size: 1.2rem;
+  }
+}
+
+.banner__btn {
+  width: 140px;
+  height: 45px;
+  font-family: "JosefinSans-Regular", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #d3AB55;
+  background-color: transparent;
+  border: 1px solid #d3AB55;
+  cursor: pointer;
+  transition: all 0.8s;
+}
+.banner__btn:hover {
+  background-color: #d3AB55;
+  color: #000;
+}
+@media (max-width: 500px) {
+  .banner__btn {
+    width: 100px;
+    height: 36px;
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+  }
+}
+@media (max-width: 900px) {
+  .banner__btn {
+    width: 135px;
+    height: 38px;
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+  }
+}
+
+.card {
+  width: 33.3333%;
+  height: 30vw;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 900px) {
+  .card {
+    width: 50%;
+    height: 60vh;
+  }
+}
+@media (max-width: 700px) {
+  .card {
+    height: 50vh;
+  }
+}
+@media (max-width: 500px) {
+  .card {
+    width: 100%;
+    height: 60vh;
+  }
+}
+.card:hover .card-overlay {
+  left: 0;
+}
+.card-image {
+  object-fit: cover;
+  opacity: 0.8;
+}
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  padding: 0.6rem;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: rgba(74, 112, 122, 0.6);
+  color: #fff;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: left 0.7s;
+}
+.card-overlay__heading {
+  font-family: "Nunito-Regular", "sans-serif";
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+@media (max-width: 500px) {
+  .card-overlay__heading {
+    font-size: 1.4rem;
+  }
+}
+.card-overlay__content {
+  font-family: "JosefinSans-Light", sans-serif;
+  font-size: 1.2rem;
+  margin: 10px 0 20px 0;
+  padding: 1rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+@media (max-width: 500px) {
+  .card-overlay__content {
+    font-size: 1rem;
+  }
+}
+.card-overlay__btn {
+  width: 150px;
+  height: 40px;
+  color: #4A707A;
+  background-color: #fff;
+  font-family: "JosefinSans-Regular", sans-serif;
+  font-size: 0.8;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid #4A707A;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "JosefinSans-Bold";
+  src: url(/assets/fonts/Josefin_Sans/static/JosefinSans-Bold.ttf);
+}
+@font-face {
+  font-family: "JosefinSans-SemiBold";
+  src: url(/assets/fonts/Josefin_Sans/static/JosefinSans-SemiBold.ttf);
+}
+@font-face {
+  font-family: "JosefinSans-Medium";
+  src: url(/assets/fonts/Josefin_Sans/static/JosefinSans-Medium.ttf);
+}
+@font-face {
+  font-family: "JosefinSans-Light";
+  font-weight: 200;
+  src: url(/assets/fonts/Josefin_Sans/static/JosefinSans-Light.ttf);
+}
+@font-face {
+  font-family: "JosefinSans-Regular";
+  src: url(/assets/fonts/Josefin_Sans/static/JosefinSans-Regular.ttf);
+}
+@font-face {
+  font-family: "Nunito-Bold";
+  src: url(/assets/fonts/Nunito/static/Nunito-Bold.ttf);
+}
+@font-face {
+  font-family: "Nunito-SemiBold";
+  src: url(/assets/fonts/Nunito/static/Nunito-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Nunito-Medium";
+  src: url(/assets/fonts/Nunito/static/Nunito-Medium.ttf);
+}
+@font-face {
+  font-family: "Nunito-Light";
+  src: url(/assets/fonts/Nunito/static/Nunito-Light.ttf);
+}
+@font-face {
+  font-family: "Nunito-Regular";
+  src: url(/assets/fonts/Nunito/static/Nunito-Regular.ttf);
+}
+@font-face {
+  font-family: "Kaushan";
+  src: url(/assets/fonts/Kaushan_Script/KaushanScript-Regular.ttf);
+}
+h1 {
+  font-family: "JosefinSans-Bold";
+}
+
+h3 {
+  font-family: "JosefinSans-Light";
+}
+
+p {
+  font-family: "Nunito-Regular";
+  line-height: 1.5;
+}
+
+/*# sourceMappingURL=main.css.map */
